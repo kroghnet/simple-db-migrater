@@ -2,6 +2,9 @@
 
 This is a simple database migrater tool, which was created because I find Flyway too big for simple forward DB migration.
 
+The code compiles to Java 1.6
+
+## How does it work
 Migration is done by reading either SQL files from a folder, or SQL resources somewhere on the classpath, and applying those files in the natural sort order, of their names.
 A table for containing information about already applied scripts is created, and will contain a record for each applied sql file. Files will only be applied once.
 All upgrades will be applied in a single transaction, ensuring that the database cannot be left in an undefined state.
